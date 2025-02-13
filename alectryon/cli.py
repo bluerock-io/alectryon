@@ -207,7 +207,7 @@ def _run_coqdoc(coq_snippets, coqdoc_bin=None):
     from shutil import rmtree
     from tempfile import mkstemp, mkdtemp
     from subprocess import check_output
-    coqdoc_bin = coqdoc_bin or os.path.join(os.getenv("COQBIN", ""), "coqdoc")
+    coqdoc_bin = coqdoc_bin or os.path.join(os.getenv("ROCQBIN", ""), "coqdoc")
     dpath = mkdtemp(prefix="alectryon_coqdoc_")
     fd, filename = mkstemp(prefix="alectryon_coqdoc_", suffix=".v", dir=dpath)
     try:
